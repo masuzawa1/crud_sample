@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+  # 一覧画面に対応するアクション
+  def index
+    @users = User.all
+  end
   # 新規作成に対応するアクション
   def new
     @user = User.new
