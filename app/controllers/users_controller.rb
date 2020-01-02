@@ -18,6 +18,12 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  # 更新を行うためのアクション
+  def update
+    user = User.find(params[:id])
+    user.update(user_params)
+  end
+
   # 削除を行うためのアクション
   def destroy
     user = User.find(params[:id])
